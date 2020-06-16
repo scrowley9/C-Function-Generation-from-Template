@@ -1,4 +1,14 @@
 {
-    "function_name" : "print_hello"
-    
+    "templates":[
+        {
+            "function_names":["print_hello", "print_hi", "print_howdy"],
+            "return_type":"hello_type",
+            "args":[["arg1_name", "type1"], ["arg2_name", "type2"]]
+        },
+        {
+            "function_names":["print_goodbye", "print_adios", "print_sayonara"],
+            "return_type":"goodbye_type",
+            "args":[["arg1_name", "type1"], ["arg2_name", "type2"], ["arg3_name", "type3"]]
+        }
+    ]
 }
