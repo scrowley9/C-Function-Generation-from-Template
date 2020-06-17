@@ -1,8 +1,36 @@
 
-How to use:
-(1) Create a template file in JSON form. (type the field names exactly as you see them here)
-    templates - specify the start of a template
-        function_names - array of function names
-        return_type - function return type
-        args - array of argument tuples - name and type
+I created this because I need to create loads of very similar functions in C and I don't want to bother
+with typing out every single function by hand so I automated it.
 
+NOTE: All code was condensed into one "template.py" script for ease of transportation
+
+PYTHON VERSION: '3.8.2' -- but anything above 3 should work
+
+STEPS:
+(1) Create a template file in JSON form
+    
+    **** IMPORTANT: input the field names EXACTLY as you see them below) ****
+    
+    "templates" - specify the start of a template (Only  create ONE template field in the JSON)
+        "c_file" - path to file to append functions to
+        "h_file" - path to file to add prototypes to -- IGNORED IF "extern" FLAG IS "0" ----- i.e. the header file will not be written to
+        "extern" - set to "1" if functions are extern, "0" if functions are static
+        "function_names" - array of function names
+        "return_type" - function return type
+        "args" - array of argument tuples - name and type
+
+        ***** JSON EXAMPLE *****
+        If you are unsure how to create the template JSON try to follow the example JSON file: "template.json"
+
+
+(2) Script Execution
+        Example: python3 template.py --json example_template.json
+
+(3) See Script Command Line Help: "python3 template.py -h"
+
+
+Final Notes:
+    I did NOT create "bye.c" & "bye.h" -- as specified in the example_template.json -- so you can see the script catch exceptions
+
+    This script does NOT manage header file inclusion.
+    You must manage your included header files -- #include "path/to/hello.h"

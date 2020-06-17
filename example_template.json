@@ -1,11 +1,17 @@
 {
     "templates":[
         {
+            "c_file":"Ex_Program_Files/hello.c",
+            "h_file":"Ex_Program_Files/hello.h",
+            "extern":"1",
             "function_names":["print_hello", "print_hi", "print_howdy"],
             "return_type":"hello_type",
             "args":[["arg1_name", "type1"], ["arg2_name", "type2"]]
         },
         {
+            "c_file":"Ex_Program_Files/bye.c",
+            "h_file":"Ex_Program_Files/bye.h",
+            "extern":"0",
             "function_names":["print_goodbye", "print_adios", "print_sayonara"],
             "return_type":"goodbye_type",
             "args":[["arg1_name", "type1"], ["arg2_name", "type2"], ["arg3_name", "type3"]]
