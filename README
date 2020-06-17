@@ -6,7 +6,7 @@ NOTE: All code was condensed into one "template.py" script for ease of transport
 
 PYTHON VERSION: '3.8.2' -- but anything above 3 should work
 
-STEPS:
+SETUP STEPS:
 (1) Create a template file in JSON form
     
     **** IMPORTANT: input the field names EXACTLY as you see them below) ****
