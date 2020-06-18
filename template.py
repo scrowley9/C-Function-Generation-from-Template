@@ -59,11 +59,14 @@ class Template:
         header = self.return_type + " " + func_name + "("
 
         # Append args to string
-        for index, arg in enumerate(self.args):
-            header += "" + arg.get_arg_type() + " " + arg.get_arg_name()
-            if index != (len(self.args)-1):
-                header += ", "
-        
+        if len(self.args) == 0:
+            header += "void"
+        else:    
+            for index, arg in enumerate(self.args):
+                header += "" + arg.get_arg_type() + " " + arg.get_arg_name()
+                if index != (len(self.args)-1):
+                    header += ", "
+            
         header += ")"
         return header
     
@@ -115,7 +118,7 @@ def output_functions_to_program_files(headers, template):
                 append_to_file(template.h_file_path, "extern ", headers, ";")
                 append_to_file(template.c_file_path, "", headers, "{\n\n}")
             else:
-                append_to_file(template.c_file_path, "static", headers, "{\n\n}")
+                append_to_file(template.c_file_path, "static ", headers, "{\n\n}")
     except Exception as exc:
         print_error_and_exit("Exception while appending functions to C & H files: " + exc)
 

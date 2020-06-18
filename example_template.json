@@ -14,7 +14,7 @@
             "extern":"0",
             "function_names":["print_goodbye", "print_adios", "print_sayonara"],
             "return_type":"goodbye_type",
-            "args":[["arg1_name", "type1"], ["arg2_name", "type2"], ["arg3_name", "type3"]]
+            "args":[]
         }
     ]
 }

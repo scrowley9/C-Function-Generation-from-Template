@@ -30,7 +30,6 @@ SETUP STEPS:
 
 
 Final Notes:
-    I did NOT create "bye.c" & "bye.h" -- as specified in the example_template.json -- so you can see the script catch exceptions
 
     This script does NOT manage header file inclusion.
     You must manage your included header files -- #include "path/to/hello.h"
@@ -38,5 +37,5 @@ Final Notes:
 
 
 TODO:
-    handle "static inline" functions in header files
+    handle "inline" functions in header files
     possibly setup a way to write the function body as a template
