@@ -39,3 +39,4 @@ Final Notes:
 
 TODO:
     handle "static inline" functions in header files
+    possibly setup a way to write the function body as a template
