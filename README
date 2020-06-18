@@ -34,3 +34,8 @@ Final Notes:
 
     This script does NOT manage header file inclusion.
     You must manage your included header files -- #include "path/to/hello.h"
+
+
+
+TODO:
+    handle "static inline" functions in header files
